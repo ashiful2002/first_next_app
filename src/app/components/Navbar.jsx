@@ -23,18 +23,8 @@ const Navbar = () => {
       <li>
         <Link href="/">Home</Link>
       </li>
-      <li tabIndex={0}>
-        <details>
-          <summary>About</summary>
-          <ul className="p-2 bg-base-100 z-10">
-            <li>
-              <Link href="/about">Overview</Link>
-            </li>
-            <li>
-              <Link href="/about/address">Address</Link>
-            </li>
-          </ul>
-        </details>
+      <li>
+        <Link href="/about">About</Link>
       </li>
       <li>
         <Link href="/services">Services</Link>

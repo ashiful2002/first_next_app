@@ -10,7 +10,7 @@ const DashboardLayout = ({ children }) => {
           <h2 className="text-2xl font-bold mb-6 text-primary">Dashboard</h2>
           <ul className="menu space-y-2">
             <li>
-              <Link href="/dashboard/profile" className="btn btn-ghost justify-start">
+              <Link href="/user-dashboard/userProfile" className="btn btn-ghost justify-start">
                 👤 User Profile
               </Link>
             </li>
