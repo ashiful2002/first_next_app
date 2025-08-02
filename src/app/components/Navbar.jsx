@@ -6,7 +6,7 @@ import React from "react";
 const Navbar = () => {
   const router = useRouter();
   const pathname = usePathname();
-  console.log(pathname);
+  // console.log(pathname);
 
   const isLoggedIn = false; // Replace with real auth check if needed
 
@@ -28,6 +28,12 @@ const Navbar = () => {
       </li>
       <li>
         <Link href="/services">Services</Link>
+      </li>
+      <li>
+        <Link href="/posts">Posts</Link>
+      </li>
+      <li>
+        <Link href="/meals">Meals</Link>
       </li>
     </>
   );

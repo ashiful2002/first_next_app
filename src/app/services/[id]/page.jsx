@@ -1,3 +1,4 @@
+import NotFoundPage from "@/app/not-found";
 import React from "react";
 const fakeServices = [
   {
@@ -40,16 +41,21 @@ const ServiceDetails = ({ params }) => {
   const { id, name, description, image } = params;
 
   const singleData = fakeServices.find((d) => d.id === id);
-  return (
-    <div>
-      ServiceDetails id{id}
+  if (singleData) {
+    return (
       <div>
-        <img src={singleData.image} alt={singleData.name} />
-        <h1>{singleData.name}</h1>
-        <p>{singleData.description}</p>
+        ServiceDetails id{id}
+        <div>
+          <img src={singleData.image} alt={singleData.name} />
+          <h1>{singleData.name}</h1>
+          <p>{singleData.description}</p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <NotFoundPage />;
+    // or here we can use another text
+  }
 };
 
 export default ServiceDetails;
